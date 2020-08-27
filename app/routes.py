@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 from flask import url_for, render_template, send_from_directory
 import jinja2.exceptions
 from app import app
