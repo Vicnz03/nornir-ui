@@ -11,6 +11,13 @@ import jinja2.exceptions
 def index():
     return render_template('index.html')
 
+
+@app.route('/blank')
+@login_required
+def blank():
+    core_box= ['mx','acx','ptx']
+    return render_template('blank.html',core_box=core_box)
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
